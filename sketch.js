@@ -1,5 +1,5 @@
 
-//Set Up 
+//Set Up
 function setup() {
   createCanvas(innerWidth, innerWidth);
   strokeWeight(3);
@@ -11,11 +11,11 @@ function setup() {
 function draw() {
 clear();
 //Background
-    var randomRed = random(200,240);
-    var randomGreen = random(140,180);
-    var randomBlue = random(200,255);
+    var randomRed = random(00,10);
+    var randomGreen = random(100,200);
+    var randomBlue = random(150,240);
   background(randomRed, randomGreen, randomBlue, 200);
-  
+
 // GeneralVariables
   var margin = 10;
   var width = innerWidth - 2*margin;
@@ -27,31 +27,31 @@ clear();
 //ShiftVaribales
   var shift = 2
   var shift2 = 10
-  
+
   translate (margin,margin)
-  
+
 //x y setup
   for(var y=0; y < height; y = y+sideLen){
     for(var x=0; x < width; x = x+ sideLen){
 
 //Varying colors and size
-  fill(random (randomRed + 10) , random (randomGreen - 30) , random ( randomBlue + 10), 130);
+  fill(random (randomRed + 220 ) , random (randomGreen - 150) , random ( randomBlue + 150), 130);
   stroke(random (255,255),180 , random (255,255), 200);
-      
-      
+
+
 
 //Square coordinates (with random)
       quad(x + space + random(-shift,shift) ,y + space + random(-shift,shift),
-           x + sideLen - space + random(-shift,shift),y + space + random(-shift,shift),  
-           x + sideLen - space + random(-shift,shift), y + sideLen - space + random(-shift,shift), 
+           x + sideLen - space + random(-shift,shift),y + space + random(-shift,shift),
+           x + sideLen - space + random(-shift,shift), y + sideLen - space + random(-shift,shift),
            x + space + random(-shift,shift), y + sideLen - space + random(-shift,shift));
 
 //diamond underneath
  // quad(x + space + random(-shift2,shift2) ,y + space + random(-shift2,shift2),
-          // x + sideLen - space + random(-shift2,shift2),y + space + random(-shift2,shift2),  
-          // x + sideLen - space + random(-shift2,shift2), y + sideLen - space + random(-shift2,shift2), 
+          // x + sideLen - space + random(-shift2,shift2),y + space + random(-shift2,shift2),
+          // x + sideLen - space + random(-shift2,shift2), y + sideLen - space + random(-shift2,shift2),
           // x + space + random(-shift2,shift2), y + sideLen - space + random(-shift2,shift2));
-      
+
   }
 }
   noLoop();
